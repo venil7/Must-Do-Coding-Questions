@@ -1,5 +1,3 @@
-import 'package:tree/prefix.dart';
-
 class Tree {
   Tree(this.val, {this.left, this.right});
   Tree left;
