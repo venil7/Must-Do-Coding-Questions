@@ -16,7 +16,6 @@ class Graph {
         });
 
   add(num from, num to, int val) {
-    // final n = length;
     _graph[from * length + to] = val;
     _graph[to * length + from] = val; //backwards path
   }
@@ -44,7 +43,7 @@ num dijkstra(Graph graph, num from, num to) {
 
   final queue = List<num>.from([from]);
 
-  while (!visited[to] /*|| queue.isEmpty*/) {
+  while (!visited[to] || queue.isEmpty) {
     final current = queue.removeAt(0);
 
     final unvisitedNeigbours =
